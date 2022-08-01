@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+.test{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size:40px;
+}
+#load{
+    z-index: 100;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+    height: 100vh;
+    display: block;
+    animation:loadpage 2s linear forwards;
+}
+@keyframes loadpage{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        display: none;
+        opacity: 100%;
+        z-index: -100;
+    }
+}
+body{
+    display: flex;
+    justify-content: centerabs;
+    align-items: center;
+    min-height:100vh;
+    overflow: hidden;
+}
+.title{
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    animation: text-opacity 2s infinite linear;
+    z-index: 100;
+    display: block;
+    top: 50%;
+    display:flex;
+    font-weight: bold;
+    width: 100%;
+}
+@keyframes text-opacity{
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.box:hover .title{
+    display: none;
+}
+.container{
+    transform-style:preserve-3d ;
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+}
+.container .box{
+    position: relative;
+    width:450px;
+    height: 300px;
+    margin: 60px 0;
+    background:transparent;
+    transform-style:preserve-3d ;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+}
+.container .box .imgbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 100%;
+}
+.container .box .contentbox{
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    right: 50px;
+    background:#514DEC;
+    transform: translateZ(20px) scaleY(0);
+    padding: 40px 25px;
+    transform-origin:top ;
+    transition: 0.5s;
+    transform-style:preserve-3d ;
+}
+.box:hover .contentbox{
+        transform: translateZ(20px) scaleY(1);
+        /* box-shadow: 0 50px 80px rgba(0, 0, 0, 0.5); */
+}
+.contentbox:hover{
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vanilla.js</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/load-awesome-1.1.0/css/ball-clip-rotate-pulse.css">
+</head>
+<body>
+    
+    <div id="load" class="la-ball-clip-rotate-pulse la-dark la-3x">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="container">
+        <!-- <h1 class="test">helloworld</h1> -->
+        <div class="box">
+            <h1 class="title">Use mouse to hover the img</h1>
+            <div class="imgbox">
+                <img  src="/img1.png">
+            </div>
+            <div class="contentbox">
+                <h1>RubyChen</h1>
+                <p>Hello I am the developer of this webside ,and I am the UI/UX designer.I make many great look webside. Hope you like it👍</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript" src="loadingoverlay.min.js"></script>    
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".box"), {
+            max: 40,
+            speed: 500
+        });
+    </script>
+</body>
+</html>
