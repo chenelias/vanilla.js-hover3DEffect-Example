@@ -1,2 +1,5 @@
-# vanilla.js-hover3DEffect
-the cool 3d hover effect with css & js 
+# vanilla.js-hover3DEffect Example
+Cool 3D hover effect with css & js 
+
+## Run
+I suggest run it with vscode live server.
